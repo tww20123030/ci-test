@@ -21,8 +21,8 @@ sudo echo "<VirtualHost *:80>
                 allow from all
         </Directory>
 
-</VirtualHost>" | sudo tee /etc/apache2/sites-available/000-default.conf > /dev/null
-sudo cat /etc/apache2/sites-available/000-default.conf
+</VirtualHost>" | sudo tee /etc/apache2/sites-available/001-php.conf> /dev/null
+sudo cat /etc/apache2/sites-available/001-php.conf
 sudo ls /etc/apache2/sites-available/
 
 sudo a2enmod rewrite
