@@ -23,7 +23,7 @@ before_install:
 deploy:
  provider: pages
  skip_cleanup: true
- github_token: $Token_CI # Set in travis-ci.org dashboard
+ github_token: $TokenCI # Set in travis-ci.org dashboard
  on: 
    all_branches: true
 
