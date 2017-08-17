@@ -5,7 +5,7 @@ cache:
   apt: true
 before_script: #composer require phpunit/phpunit
 script: 
-  #phpunit Test.php
+  phpunit test_print.php
 after_success: 
   #ssh tww@haswell && touch ci.txt
   #ssh TANG-WW@202.120.40.82
