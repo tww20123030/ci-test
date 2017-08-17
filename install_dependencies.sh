@@ -8,7 +8,6 @@ WEBROOT="$(pwd)/htdocs"
 CGIROOT=`dirname "$(which php-cgi)"`
 echo "WEBROOT: $WEBROOT"
 echo "CGIROOT: $CGIROOT"
-sudo ls /etc/apache2/sites-available/
 sudo echo "<VirtualHost *:80>
         DocumentRoot $WEBROOT
         <Directory />
@@ -30,6 +29,7 @@ sudo echo "<VirtualHost *:80>
 
 </VirtualHost>" | sudo tee /etc/apache2/sites-available/default > /dev/null
 sudo cat /etc/apache2/sites-available/default
+sudo touch /etc/apache2/sites-available/testset
 sudo ls /etc/apache2/sites-available/
 
 sudo a2enmod rewrite
