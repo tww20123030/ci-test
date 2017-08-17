@@ -1,29 +1,10 @@
 language: php
 php:
-- '5.6'
-cache:
-  apt: true
-before_script: #composer require phpunit/phpunit
-script: 
-  phpunit test_print.php
-after_success: 
-  #ssh tww@haswell && touch ci.txt
-  #ssh TANG-WW@202.120.40.82
-  #-  rsync -rv --delete -e 'ssh -o stricthostkeychecking=no -p 22' ./ tww@192.168.10.207:/home/tww/sync
-#- git config --global user.name "tww20123030"
-#- git config --global user.email "1906864691@qq.com"
-#- git branch -l 
-#- git checkout raw
-before_install:
-  #- openssl aes-256-cbc -K $encrypted_273edb0521c2_key -iv $encrypted_273edb0521c2_iv
-  #  -in id_rsa.enc -out ~/.ssh/id_rsa -d
-  #-  chmod 600 ~/.ssh/id_rsa
-  #-  echo -e "Host  192.168.10.207\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+  - "5.4"
+  - "5.5"
 
-deploy:
- provider: pages
- skip_cleanup: true
- github_token: $TokenCI # Set in travis-ci.org dashboard
- on: 
-   all_branches: true
+before_script:
+  - ./install_dependencies.sh
+  
 
+script: curl -s http://localhost/ && sudo cat /var/log/apache2/error.log && curl -s http://localhost/ | grep -F "hello world! $TRAVIS_PHP_VERSION" && curl -s http://localhost/non_existing_url_is_redirected | grep -F "hello world! $TRAVIS_PHP_VERSION" && curl -s http://mydomain.local/ | grep -F "hello world! $TRAVIS_PHP_VERSION"
