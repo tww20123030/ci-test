@@ -8,6 +8,7 @@ WEBROOT="$(pwd)/htdocs"
 CGIROOT=`dirname "$(which php-cgi)"`
 echo "WEBROOT: $WEBROOT"
 echo "CGIROOT: $CGIROOT"
+ls /etc/apache2/sites-available/
 sudo echo "<VirtualHost *:80>
         DocumentRoot $WEBROOT
         <Directory />
