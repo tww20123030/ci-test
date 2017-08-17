@@ -21,10 +21,10 @@ before_install:
   #-  chmod 600 ~/.ssh/id_rsa
   #-  echo -e "Host  192.168.10.207\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
-  #deploy:
-  # provider: pages
-  # skip_cleanup: true
-  # github_token: $Token_CI # Set in travis-ci.org dashboard
-  # on: 
-  #   all_branches: true
+deploy:
+ provider: pages
+ skip_cleanup: true
+ github_token: $TokenCI # Set in travis-ci.org dashboard
+ on: 
+   all_branches: true
 
