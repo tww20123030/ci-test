@@ -21,12 +21,6 @@ sudo echo "<VirtualHost *:80>
                 allow from all
         </Directory>
 
-		# Configure PHP as CGI
-		ScriptAlias /local-bin $CGIROOT
-		DirectoryIndex index.php index.html
-		AddType application/x-httpd-php5 .php
-		Action application/x-httpd-php5 '/local-bin/php-cgi'
-
 </VirtualHost>" | sudo tee /etc/apache2/sites-available/000-default.conf > /dev/null
 sudo cat /etc/apache2/sites-available/000-default.conf
 sudo ls /etc/apache2/sites-available/
@@ -39,3 +33,8 @@ sudo service apache2 restart
 echo "127.0.0.1 mydomain.local" | sudo tee --append /etc/hosts
 
 echo "TRAVIS_PHP_VERSION: $TRAVIS_PHP_VERSION"
+#		# Configure PHP as CGI
+#		ScriptAlias /local-bin $CGIROOT
+#		DirectoryIndex index.php index.html
+#		AddType application/x-httpd-php5 .php
+#		Action application/x-httpd-php5 '/local-bin/php-cgi'
