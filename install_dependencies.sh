@@ -29,7 +29,8 @@ sudo echo "<VirtualHost *:80>
 		Action application/x-httpd-php5 '/local-bin/php-cgi'
 
 </VirtualHost>" | sudo tee /etc/apache2/sites-available/default > /dev/null
-cat /etc/apache2/sites-available/default
+sudo cat /etc/apache2/sites-available/default
+sudo ls /etc/apache2/sites-available/
 
 sudo a2enmod rewrite
 sudo a2enmod actions
