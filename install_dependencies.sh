@@ -8,7 +8,7 @@ WEBROOT="$(pwd)/htdocs"
 CGIROOT=`dirname "$(which php-cgi)"`
 echo "WEBROOT: $WEBROOT"
 echo "CGIROOT: $CGIROOT"
-sudo echo "<VirtualHost *:80>
+sudo echo "<VirtualHost *:8080>
         DocumentRoot $WEBROOT
         <Directory />
                 Options FollowSymLinks
