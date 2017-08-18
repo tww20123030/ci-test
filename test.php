@@ -27,7 +27,8 @@ function test_post($value1, $value2){
         $found = true;
       }
     }
-    echo assert($found == true); 
+    if(assert($found == true) != 1)
+     $error = 1;  
     // var_dump($res);
 }
 // test PUT
@@ -39,7 +40,8 @@ function test_put($class_id, $value1, $value2) {
         $found = true;
       }
     }
-    echo assert($found == true);
+   if(assert($found == true) != 1)
+     $error = 1;  
     // var_dump($res);
 }
 // test patch
@@ -51,7 +53,8 @@ function test_patch($class_id, $attr, $value) {
         $found = true;
       }
     }
-    echo assert($found == true);
+    if(assert($found == true) != 1)
+     $error = 1;  
     // var_dump($res);
 }
 // test delete
@@ -68,24 +71,22 @@ function test_delete($class_id) {
         $found = true;
       }
    }
-   echo assert($found == false);
+   if( assert($found == false) != 1)
+     $error = 1;
    // var_dump($res2);
 }
-echo "Test begin!\n";
-#test_get(1);
-test_get(20);
 echo "Test GET!\n";
-test_post('SAT', 30);
+test_get(20);
 echo "Test POST!\n";
-test_put(1, 'SAT', 30);
+test_post('SAT', 30);
 echo "Test PUT!\n";
-test_patch(2, 'count', 26);
+test_put(1, 'SAT', 30);
 echo "Test PATCH!\n";
-test_delete(1);
+test_patch(2, 'count', 26);
 echo "Test DELETE!\n";
-echo "error: $error\n";
+test_delete(1);
 if ($error){
-  echo "Test failed!\n";
+  echo "failed!\n";
   exit(1);
 }
 else{
