@@ -34,7 +34,7 @@ sudo ls /var/www/
 # PHP
 sudo mkdir /var/www/php
 sudo echo "<?php
-             phpinfo()
+             echo "hello world";
            ?>" > /var/www/html/index.php
 sudo service apache2 restart
 
