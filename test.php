@@ -84,8 +84,12 @@ echo "Test PATCH!\n";
 test_delete(1);
 echo "Test DELETE!\n";
 echo "error: $error\n";
-if ($error)
-    echo "Test failed!\n"
-else
-    echo "Test end, all passed!\n";
+if ($error){
+  echo "Test failed!\n"
+  exit (1);
+}
+else{
+  echo "Test end, all passed!\n";
+  exit (0);
+}
 ?>
