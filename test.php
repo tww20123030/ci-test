@@ -10,7 +10,7 @@ require('test_api.php');
 // test get
 function test_get($class_id){
     $res = http("http://localhost:80/ci-test/class/$class_id", "");
-    assert(count($res) == 2*1);  
+    echo assert(count($res) == 2*1);  
     var_dump($res);
 }
 // test post
@@ -24,7 +24,7 @@ function test_post($value1, $value2){
         $found = true;
       }
     }
-    assert($found == true); 
+    echo assert($found == true); 
     // var_dump($res);
 }
 // test PUT
@@ -36,7 +36,7 @@ function test_put($class_id, $value1, $value2) {
         $found = true;
       }
     }
-    assert($found == true);
+    echo assert($found == true);
     // var_dump($res);
 }
 // test patch
@@ -48,7 +48,7 @@ function test_patch($class_id, $attr, $value) {
         $found = true;
       }
     }
-    assert($found == true);
+    echo assert($found == true);
     // var_dump($res);
 }
 // test delete
@@ -65,20 +65,20 @@ function test_delete($class_id) {
         $found = true;
       }
    }
-   assert($found == false);
+   echo assert($found == false);
    // var_dump($res2);
 }
-echo "Test begin!<br>";
+echo "Test begin!\n";
 test_get(1);
 #test_get(20);
-echo "Test GET!<br>";
+echo "Test GET!\n";
 test_post('SAT', 30);
-echo "Test POST!<br>";
+echo "Test POST!\n";
 test_put(1, 'SAT', 30);
-echo "Test PUT!<br>";
+echo "Test PUT!\n";
 test_patch(2, 'count', 26);
-echo "Test PATCH!<br>";
+echo "Test PATCH!\n";
 test_delete(1);
-echo "Test DELETE!<br>";
-echo "Test end, all passed!<br>\n";
+echo "Test DELETE!\n";
+echo "Test end, all passed!\n";
 ?>
