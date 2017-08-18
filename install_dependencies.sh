@@ -22,7 +22,7 @@ sudo apt-get install php5-cgi
 #        </Directory>
 #
 #</VirtualHost>" | sudo tee /etc/apache2/sites-available/default> /dev/null
-sudo cat /etc/apache2/sites-enabled/000-default ##
+sudo cat /etc/apache2/apache2.conf ##
 #sudo ls /etc/apache2/sites-available/
 
 sudo a2enmod fastcgi alias
