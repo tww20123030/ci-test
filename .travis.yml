@@ -4,7 +4,6 @@ php:
 
 before_script:
   - ./install_dependencies.sh
-  - sudo uname -a 
 
 script: #curl -s http://localhost:80
   php test.php
