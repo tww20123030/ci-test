@@ -11,8 +11,8 @@ $error = 0;
 function test_get($class_id){
     global $error;
     $res = http("http://localhost:80/ci-test/class/$class_id", "");
-    echo assert(count($res) == 2*1);
-    #if (!assert(count($res) == 2*1)) #assert(parameter)return 1 if the parameter is true
+    #echo assert(count($res) == 2*1);
+    if (assert(count($res) == 2*1) != 1) #assert(parameter)return 1 if the parameter is true
      $error = 1;  
     var_dump($res);
 }
@@ -83,5 +83,9 @@ test_patch(2, 'count', 26);
 echo "Test PATCH!\n";
 test_delete(1);
 echo "Test DELETE!\n";
-echo "Test end, all passed!\n";
+echo "error: $error\n";
+if ($error)
+    echo "Test failed!\n"
+else
+    echo "Test end, all passed!\n";
 ?>
