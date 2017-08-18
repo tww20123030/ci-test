@@ -23,11 +23,25 @@ sudo apt-get install -qq apache2
 #
 #</VirtualHost>" | sudo tee /etc/apache2/sites-available/001-php.conf> /dev/null
 #sudo cat /etc/apache2/sites-available/001-php.conf
-sudo ls /etc/apache2/sites-available/
+#sudo ls /etc/apache2/sites-available/
 
 sudo a2enmod rewrite
 sudo a2enmod actions
 sudo service apache2 restart
+sudo ls /var/www/
+#sudo cat /etc/apache2/sites-enabled/000-default.conf
+
+# PHP
+sudo mkdir /var/www/php
+sudo echo "<?php
+             phpinfo()
+           ?>" > /var/www/html/index.php
+sudo service apache2 restart
+
+#sudo cp 001-php.conf /etc/apache2/sites-enabled/001-php.conf
+#sudo cp 001-php.conf /etc/apache2/sites-available/001-php.conf
+#sudo a2ensite 001-php
+#sudo a2ensite php
 
 # Configure custom domain
 #echo "127.0.0.1 mydomain.local" | sudo tee --append /etc/hosts
