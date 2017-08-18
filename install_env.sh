@@ -2,5 +2,5 @@
 
 # Install everything
 sudo apt-get install lamp-server^
-sudo ls /va/www/
-sudo service apach2 restart
+sudo ls /var/www/
+sudo service apache2 restart
