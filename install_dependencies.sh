@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 # Install everything
-sudo apt-get install -qq apache2
-
+sudo apt-get install -qq apache2 libapache2-mod-fastcgi
 ## Configure Apache
 #WEBROOT="$(pwd)/htdocs"
 #CGIROOT=`dirname "$(which php-cgi)"`
