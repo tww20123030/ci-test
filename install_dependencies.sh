@@ -33,6 +33,7 @@ sudo ls /var/www/
 
 # PHP
 sudo mkdir /var/www/php
+sudo rm /var/www/html/index.html
 sudo echo "<?php
              echo "hello world";
            ?>" > /var/www/html/index.php
