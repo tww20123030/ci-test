@@ -3,7 +3,7 @@ php:
   - "5.5"
 
 before_script:
-  - ./install_dependencies.sh
+ - ./install_dependencies.sh
 
 script:  curl -s http://localhost:80
   #php test.php
