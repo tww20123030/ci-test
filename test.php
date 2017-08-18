@@ -9,13 +9,13 @@ require('test_api.php');
 
 // test get
 function test_get($class_id){
-    $res = http("http://localhost:8080/ci-test/class/$class_id", "");
+    $res = http("http://localhost:80/ci-test/class/$class_id", "");
     //assert(count($res) == 2*1);  
     // var_dump($res);
 }
 // test post
 function test_post($value1, $value2){
-    $res = http("http://localhost:8080/ci-test/class", array('name' => $value1, 'count' => $value2), 'POST');
+    $res = http("http://localhost:80/ci-test/class", array('name' => $value1, 'count' => $value2), 'POST');
     // $res = json_decode($res);
     // file_put_contents("./log", $res);
     $found = false;
@@ -29,7 +29,7 @@ function test_post($value1, $value2){
 }
 // test PUT
 function test_put($class_id, $value1, $value2) {
-    $res = http("http://localhost:8080/ci-test/class/$class_id?name=$value1&count=$value2", "", 'PUT');
+    $res = http("http://localhost:80/ci-test/class/$class_id?name=$value1&count=$value2", "", 'PUT');
     $found = false;
     foreach ($res as $ele){ 
       if($ele['name'] == $value1 && $ele['count'] == $value2){
@@ -41,7 +41,7 @@ function test_put($class_id, $value1, $value2) {
 }
 // test patch
 function test_patch($class_id, $attr, $value) {
-    $res = http("http://localhost:8080/ci-test/class/$class_id?$attr=$value", "", 'PATCH');
+    $res = http("http://localhost:80/ci-test/class/$class_id?$attr=$value", "", 'PATCH');
     $found = false;
     foreach ($res as $ele){ 
       if($ele[$attr] == $value){
@@ -53,12 +53,12 @@ function test_patch($class_id, $attr, $value) {
 }
 // test delete
 function test_delete($class_id) {
-   $res1 = http("http://localhost:8080/ci-test/class/$class_id", "");
+   $res1 = http("http://localhost:80/ci-test/class/$class_id", "");
    // var_dump($res1);
    $name = $res1['name'];
    $count = $res1['count'];
    
-   $res2 = http("http://localhost:8080/ci-test/class/$class_id", "", 'DELETE'); 
+   $res2 = http("http://localhost:80/ci-test/class/$class_id", "", 'DELETE'); 
    $found = false;
    foreach ($res2 as $ele){ 
       if($ele['name'] == $name && $ele['count'] == $count) {

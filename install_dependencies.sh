@@ -36,11 +36,12 @@ sudo ls /var/www/
 sudo mkdir /var/www/php
 sudo rm /var/www/html/index.html
 sudo mkdir /var/www/html/ci-test
-sudo cp Request.php Response.php index.php .htaccess /var/www/html/ci-test
+ls
+#sudo cp Request.php Response.php index.php .htaccess /var/www/html/ci-test
 #sudo touch /var/www/html/index.php
-#echo "<?php
-#             echo 'hello world';
-#           ?>" | sudo tee /var/www/html/index.php
+echo "<?php
+             echo 'hello world';
+           ?>" | sudo tee /var/www/html/index.php
 #sudo cp 000-default.conf /etc/apache2/sites-enabled/000-default.conf
 sudo service apache2 restart
 
