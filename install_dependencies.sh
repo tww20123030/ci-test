@@ -34,9 +34,10 @@ sudo ls /var/www/
 # PHP
 sudo mkdir /var/www/php
 sudo rm /var/www/html/index.html
-sudo echo "<?php
+#sudo touch /var/www/html/index.php
+echo "<?php
              echo "hello world";
-           ?>" > /var/www/html/index.php
+           ?>" | sudo tee /var/www/html/index.php
 sudo service apache2 restart
 
 #sudo cp 001-php.conf /etc/apache2/sites-enabled/001-php.conf
