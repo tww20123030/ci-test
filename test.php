@@ -76,7 +76,7 @@ function test_delete($class_id) {
    // var_dump($res2);
 }
 echo "Test GET!\n";
-test_get(1); #right
+test_get(1); //right
 echo "Test POST!\n";
 test_post('SAT', 30);
 echo "Test PUT!\n";
