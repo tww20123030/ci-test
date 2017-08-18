@@ -8,7 +8,7 @@
 require('test_api.php');
 $error = 0;
 // test get
-function test_get($class_id){a
+function test_get($class_id){
     global $error;
     $res = http("http://localhost:80/ci-test/class/$class_id", "");
     echo assert(count($res) == 2*1)
