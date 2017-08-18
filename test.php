@@ -6,11 +6,14 @@
  */
 
 require('test_api.php');
-
+$error = 0;
 // test get
-function test_get($class_id){
+function test_get($class_id){a
+    global $error;
     $res = http("http://localhost:80/ci-test/class/$class_id", "");
-    echo assert(count($res) == 2*1);  
+    echo assert(count($res) == 2*1)
+    #if (!assert(count($res) == 2*1)) #assert(parameter)return 1 if the parameter is true
+     $error = 1;  
     var_dump($res);
 }
 // test post
@@ -69,8 +72,8 @@ function test_delete($class_id) {
    // var_dump($res2);
 }
 echo "Test begin!\n";
-test_get(1);
-#test_get(20);
+#test_get(1);
+test_get(20);
 echo "Test GET!\n";
 test_post('SAT', 30);
 echo "Test POST!\n";
