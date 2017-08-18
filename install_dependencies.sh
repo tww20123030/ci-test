@@ -24,6 +24,7 @@ sudo apt-get install -qq apache2 libapache2-mod-fastcgi
 #sudo cat /etc/apache2/sites-available/001-php.conf
 #sudo ls /etc/apache2/sites-available/
 
+sudo a2enmod fastcgi alias
 sudo a2enmod rewrite
 sudo a2enmod actions
 sudo service apache2 restart
