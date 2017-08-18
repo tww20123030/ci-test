@@ -22,6 +22,8 @@ sudo apt-get install php5-cgi
 #        </Directory>
 #
 #</VirtualHost>" | sudo tee /etc/apache2/sites-available/default> /dev/null
+#sudo cat /etc/apache2/apache2.conf ##
+sudo sed -i 's/AllowOverride None/AllowOverride All/g' /etc/apache2/apache2.conf
 sudo cat /etc/apache2/apache2.conf ##
 #sudo ls /etc/apache2/sites-available/
 
