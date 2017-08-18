@@ -14,7 +14,7 @@ function test_get($class_id){
     #echo assert(count($res) == 2*1);
     if (assert(count($res) == 2*1) != 1) #assert(parameter)return 1 if the parameter is true
      $error = 1;  
-    var_dump($res);
+    #var_dump($res);
 }
 // test post
 function test_post($value1, $value2){
@@ -85,7 +85,7 @@ test_delete(1);
 echo "Test DELETE!\n";
 echo "error: $error\n";
 if ($error){
-  echo "Test failed!\n"
+  echo "Test failed!\n";
   exit(1);
 }
 else{
