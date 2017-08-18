@@ -86,10 +86,10 @@ echo "Test DELETE!\n";
 echo "error: $error\n";
 if ($error){
   echo "Test failed!\n"
-  exit (1);
+  exit(1);
 }
 else{
   echo "Test end, all passed!\n";
-  exit (0);
+  exit(0);
 }
 ?>
