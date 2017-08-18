@@ -29,20 +29,19 @@ sudo a2enmod fastcgi alias
 sudo a2enmod rewrite
 sudo a2enmod actions
 sudo service apache2 restart
-sudo ls /var/www/
+#sudo ls /var/www/
 #sudo cat /etc/apache2/sites-enabled/000-default.conf
 
 # PHP
 sudo mkdir /var/www/php
 sudo rm /var/www/html/index.html
-sudo mkdir /var/www/html/ci-test
+#sudo mkdir /var/www/html/ci-test
 ls
 #sudo cp Request.php Response.php index.php .htaccess /var/www/html/ci-test
 #sudo touch /var/www/html/index.php
 echo "<?php
              echo 'hello world';
            ?>" | sudo tee /var/www/html/index.php
-#sudo cp 000-default.conf /etc/apache2/sites-enabled/000-default.conf
 sudo service apache2 restart
 
 #sudo cp 001-php.conf /etc/apache2/sites-enabled/001-php.conf
