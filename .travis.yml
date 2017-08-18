@@ -3,8 +3,8 @@ php:
   - "5.5"
 
 before_script:
-  - ./install_env.sh
-  
+  - ./install_dependencies.sh
+  - sudo uname -a 
 
 script: curl -s http://localhost:80
   #sudo cat /etc/apache2/sites-available/000-default.conf
