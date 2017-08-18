@@ -35,10 +35,10 @@ sudo ls /var/www/
 # PHP
 sudo mkdir /var/www/php
 sudo rm /var/www/html/index.html
-sudo touch /var/www/html/index.php
+#sudo touch /var/www/html/index.php
 echo "<?php
              phpinfo();
-             echo "hello world";
+             echo 'hello world';
            ?>" | sudo tee /var/www/html/index.php
 #sudo cp 000-default.conf /etc/apache2/sites-enabled/000-default.conf
 sudo service apache2 restart
