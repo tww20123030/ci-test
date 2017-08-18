@@ -8,21 +8,21 @@ WEBROOT="$(pwd)/htdocs"
 CGIROOT=`dirname "$(which php-cgi)"`
 echo "WEBROOT: $WEBROOT"
 echo "CGIROOT: $CGIROOT"
-sudo echo "<VirtualHost *:8080>
-        DocumentRoot $WEBROOT
-        <Directory />
-                Options FollowSymLinks
-                AllowOverride All
-        </Directory>
-        <Directory $WEBROOT >
-                Options Indexes FollowSymLinks MultiViews
-                AllowOverride All
-                Order allow,deny
-                allow from all
-        </Directory>
-
-</VirtualHost>" | sudo tee /etc/apache2/sites-available/001-php.conf> /dev/null
-sudo cat /etc/apache2/sites-available/001-php.conf
+#sudo echo "<VirtualHost *:8080>
+#        DocumentRoot $WEBROOT
+#        <Directory />
+#                Options FollowSymLinks
+#                AllowOverride All
+#        </Directory>
+#        <Directory $WEBROOT >
+#                Options Indexes FollowSymLinks MultiViews
+#                AllowOverride All
+#                Order allow,deny
+#                allow from all
+#        </Directory>
+#
+#</VirtualHost>" | sudo tee /etc/apache2/sites-available/001-php.conf> /dev/null
+#sudo cat /etc/apache2/sites-available/001-php.conf
 sudo ls /etc/apache2/sites-available/
 
 sudo a2enmod rewrite
