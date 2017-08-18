@@ -43,7 +43,7 @@ echo "<?php
              echo 'hello world';
            ?>" | sudo tee /var/www/html/index.php
 sudo cp Request.php Response.php .htaccess index.php /var/www/html/ci-test  ##
-ls   /var/www/html/ci-test         ##
+ls   /var/www/html/ci-test
 #sudo cp 000-default.conf /etc/apache2/sites-enabled/000-default.conf
 sudo service apache2 restart
 
