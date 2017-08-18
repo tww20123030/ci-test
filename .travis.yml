@@ -6,6 +6,7 @@ before_script:
   - ./install_dependencies.sh
   - sudo uname -a 
 
-script: curl -s http://localhost:80
+script: #curl -s http://localhost:80
+  php test.php
   #sudo cat /etc/apache2/sites-available/000-default.conf
   #&& sudo cat /var/log/apache2/error.log && curl -s http://localhost/ | grep -F "hello world! $TRAVIS_PHP_VERSION" && curl -s http://localhost/non_existing_url_is_redirected | grep -F "hello world! $TRAVIS_PHP_VERSION" && curl -s http://mydomain.local/ | grep -F "hello world! $TRAVIS_PHP_VERSION"
