@@ -10,7 +10,7 @@ require('test_api.php');
 // test get
 function test_get($class_id){
     $res = http("http://localhost:80/ci-test/class/$class_id", "");
-    assert(count($res) == 2*2);  
+    assert(count($res) == 2*1);  
     var_dump($res);
 }
 // test post
