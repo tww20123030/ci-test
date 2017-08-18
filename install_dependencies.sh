@@ -21,12 +21,12 @@ sudo apt-get install php5-cgi
 #                allow from all
 #        </Directory>
 #
-#</VirtualHost>" | sudo tee /etc/apache2/sites-available/001-php.conf> /dev/null
-#sudo cat /etc/apache2/sites-available/001-php.conf
+#</VirtualHost>" | sudo tee /etc/apache2/sites-available/default> /dev/null
+sudo cat /etc/apache2/sites-available/default ##
 #sudo ls /etc/apache2/sites-available/
 
 sudo a2enmod fastcgi alias
-sudo a2enmod rewrite
+sudo a2enmod rewrite    #url rewrite rule
 sudo a2enmod actions
 sudo service apache2 restart
 #sudo ls /var/www/  ##removed
@@ -41,8 +41,8 @@ sudo rm /var/www/html/index.html
 echo "<?php
              echo 'hello world';
            ?>" | sudo tee /var/www/html/index.php
-ls            ##
 sudo cp Request.php Response.php .htaccess index.php /var/www/html/ci-test  ##
+ls   /var/www/html/ci-test         ##
 #sudo cp 000-default.conf /etc/apache2/sites-enabled/000-default.conf
 sudo service apache2 restart
 
