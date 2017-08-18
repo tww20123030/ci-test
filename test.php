@@ -11,7 +11,7 @@ $error = 0;
 function test_get($class_id){
     global $error;
     $res = http("http://localhost:80/ci-test/class/$class_id", "");
-    echo assert(count($res) == 2*1)
+    echo assert(count($res) == 2*1);
     #if (!assert(count($res) == 2*1)) #assert(parameter)return 1 if the parameter is true
      $error = 1;  
     var_dump($res);
