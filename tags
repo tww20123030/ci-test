@@ -1,0 +1,59 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Request	Request.php	/^class Request$/;"	c
+Response	Response.php	/^class Response$/;"	c
+Test	test_print.php	/^class Test extends PHPUnit_Framework_TestCase$/;"	c
+ch	test_api.php	/^    $ch = curl_init();$/;"	v
+class_id	Request.php	/^        $class_id = (int)$request_data['class'];$/;"	v
+code	Response.php	/^            $code = 200;$/;"	v
+code	Response.php	/^            $code = 404;$/;"	v
+content_type	Response.php	/^        $content_type = isset($_SERVER['CONTENT_TYPE']) ? $_SERVER['CONTENT_TYPE'] : $_SERVER['HTTP_ACCEPT'];$/;"	v
+count	test.php	/^   $count = $res1['count'];$/;"	v
+data	Request.php	/^        $data = array();$/;"	v
+data	Response.php	/^            $data = array('error' => 'Not Found');$/;"	v
+data	index.php	/^$data = Request::getRequest();$/;"	v
+data	test_api.php	/^    $data = json_decode(curl_exec($ch), true);$/;"	v
+data_name	Request.php	/^            $data_name = $method . 'Data';$/;"	v
+deleteData	Request.php	/^    private static function deleteData($request_data)$/;"	f
+encodeHtml	Response.php	/^    private static function encodeHtml($responseData)$/;"	f
+encodeJson	Response.php	/^    private static function encodeJson($responseData)$/;"	f
+encodeXml	Response.php	/^    private static function encodeXml($responseData)$/;"	f
+error	test_api.php	/^    $error = curl_error($ch);$/;"	v
+found	test.php	/^        $found = true;$/;"	v
+found	test.php	/^    $found = false;$/;"	v
+found	test.php	/^   $found = false;$/;"	v
+getData	Request.php	/^    private static function getData($request_data)$/;"	f
+getRequest	Request.php	/^    public static function getRequest()$/;"	f
+html	Response.php	/^        $html = "<table border='1'>";$/;"	v
+http	test_api.php	/^function http($url, $params, $method = 'GET', $header = array(), $timeout = 5)$/;"	f
+message	Response.php	/^            $message = 'Not Found';$/;"	v
+message	Response.php	/^            $message = 'OK';$/;"	v
+method	Request.php	/^        $method = strtolower($_SERVER['REQUEST_METHOD']);$/;"	v
+method_type	Request.php	/^    private static $method_type = array('get', 'post', 'put', 'patch', 'delete');$/;"	v
+name	test.php	/^   $name = $res1['name'];$/;"	v
+opts	test_api.php	/^    $opts = array($/;"	v
+params	test_api.php	/^            $params = http_build_query($params);$/;"	v
+patchData	Request.php	/^    private static function patchData($request_data)$/;"	f
+postData	Request.php	/^    private static function postData($request_data)$/;"	f
+print_Name	print.php	/^function print_Name(){$/;"	f
+putData	Request.php	/^    private static function putData($request_data)$/;"	f
+res	test.php	/^    $res = http("http:\/\/localhost:80\/ci-test\/class", array('name' => $value1, 'count' => $value2), 'POST');$/;"	v
+res	test.php	/^    $res = http("http:\/\/localhost:80\/ci-test\/class\/$class_id", "");$/;"	v
+res	test.php	/^    $res = http("http:\/\/localhost:80\/ci-test\/class\/$class_id?$attr=$value", "", 'PATCH');$/;"	v
+res	test.php	/^    $res = http("http:\/\/localhost:80\/ci-test\/class\/$class_id?name=$value1&count=$value2", "", 'PUT');$/;"	v
+res1	test.php	/^   $res1 = http("http:\/\/localhost:80\/ci-test\/class\/$class_id", "");$/;"	v
+res2	test.php	/^   $res2 = http("http:\/\/localhost:80\/ci-test\/class\/$class_id", "", 'DELETE'); $/;"	v
+sendResponse	Response.php	/^    public static function sendResponse($data)$/;"	f
+testOne	test_print.php	/^  public function testOne(){$/;"	f
+test_class	Request.php	/^    private static $test_class = array($/;"	v
+test_delete	test.php	/^function test_delete($class_id) {$/;"	f
+test_get	test.php	/^function test_get($class_id){$/;"	f
+test_patch	test.php	/^function test_patch($class_id, $attr, $value) {$/;"	f
+test_post	test.php	/^function test_post($value1, $value2){$/;"	f
+test_put	test.php	/^function test_put($class_id, $value1, $value2) {$/;"	f
+url	test_api.php	/^                $url = $url . '?' . http_build_query($params); $/;"	v
+xml	Response.php	/^        $xml = new SimpleXMLElement('<?xml version="1.0"?><rest><\/rest>');$/;"	v
